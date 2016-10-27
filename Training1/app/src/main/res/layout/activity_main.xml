@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/margin_20"
+    android:layout_marginRight="@dimen/margin_20" >
+
+    <TextView android:id="@+id/tv_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/signin_screen_title"
+        android:textSize="@dimen/text_size_24"
+        android:layout_marginTop="@dimen/margin_30"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_20"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_20"
+        android:paddingTop="@dimen/margin_30"
+        android:paddingBottom="@dimen/margin_30">
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/margin_100"
+            android:layout_height="@dimen/margin_100"
+            android:src="@mipmap/logo"
+            android:layout_gravity="center"
+            android:contentDescription="@string/image_description" />
+        <TextView android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/email"
+            android:layout_marginTop="@dimen/margin_30"/>
+        <EditText android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="" />
+        <TextView android:id="@+id/tv_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/password"
+            android:layout_marginTop="@dimen/margin_10"/>
+        <EditText android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="" />
+        <Button android:id="@+id/btn_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:background="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white"
+            android:text="@string/sign_in"
+            android:layout_marginTop="@dimen/margin_10"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_10">
+            <CheckBox android:id="@+id/cb_signin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stay_signed_in"
+                android:textStyle="bold"
+                android:checked="false" />
+            <TextView android:id="@+id/tv_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/need_help"
+                android:gravity="right"
+                android:autoLink="web"
+                android:textColor="@android:color/holo_blue_light"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@+id/tv_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_account"
+        android:autoLink="web"
+        android:gravity="center"
+        android:textColor="@android:color/holo_blue_light" />
+</LinearLayout>
