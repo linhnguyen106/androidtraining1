@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Trainning1</string>
+    <string name="name">Sign in to continue to Gmail</string>
+    <string name="email">Email:</string>
+    <string name="pass">Password</string>
+    <string name="signin">Sign in</string>
+    <string name="name_cb">Stay signed in</string>
+    <string name="help">Need help?</string>
+    <string name="create">Create an acount</string>
+</resources>
