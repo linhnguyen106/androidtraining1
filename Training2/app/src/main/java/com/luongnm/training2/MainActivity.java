@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private BookAdapter adapter;
     private ListView listView;
     private Context context;
-private List<Book> books;
+    private List<Book> books;
 
 
     @Override
@@ -43,7 +43,6 @@ private List<Book> books;
         listView = (ListView) findViewById(R.id.lv_books);
         String url = "https://raw.githubusercontent.com/linhnguyen106/androidtraining1/master/books.json";
         loadData(url);
-
     }
 
     private void loadData(final String url) {
@@ -74,7 +73,6 @@ private List<Book> books;
             @Override
             protected void onPostExecute(String json) {
                 super.onPostExecute(json);
-
                 Gson gson = new Gson();
                 Type listType = new TypeToken<List<Book>>(){}.getType();
                 books =  gson.fromJson(json, listType);
@@ -82,7 +80,6 @@ private List<Book> books;
                 listView.setAdapter(adapter);
             }
         };
-
         asyncTask.execute(url);
     }
 }

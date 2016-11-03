@@ -1,7 +1,6 @@
 package com.luongnm.training2;
 
 import android.content.Context;
-import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -12,8 +11,6 @@ import android.widget.TextView;
 
 import com.luongnm.training2.model.Book;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 /**
@@ -22,22 +19,20 @@ import java.util.List;
 
 public class BookAdapter extends ArrayAdapter {
 
-    private List<Book> datas;
+    private List<Book> booksList;
     private Context context;
     private LayoutInflater inflater;
 
     public BookAdapter(Context context, int resource, List<Book> books) {
         super(context, resource, books);
-        this.datas = books;
+        this.booksList = books;
         this.context = context;
     }
-
-
 
     @Nullable
     @Override
     public Book getItem(int position) {
-        return datas.get(position);
+        return booksList.get(position);
     }
 
     @NonNull
@@ -51,9 +46,13 @@ public class BookAdapter extends ArrayAdapter {
         }
 
         Book book = getItem(position);
-        TextView id = (TextView) convertView.findViewById(R.id.id);
+        TextView id = (TextView) convertView.findViewById(R.id.tv_id);
+        TextView name = (TextView) convertView.findViewById(R.id.tv_name);
+        TextView author = (TextView) convertView.findViewById(R.id.tv_author);
 
         id.setText(book.getId());
+        name.setText(book.getName());
+        author.setText(book.getAuthor());
 
         return convertView;
     }
